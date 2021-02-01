@@ -1,0 +1,113 @@
+@import "mixins";
+.footer{
+    background-color:cadetblue;
+    padding: 30px;
+    font-family: 'Lato', sans-serif;
+    a{
+        text-decoration: none;
+        color:#ffff;
+       
+    }
+    @include breakpoint-down(medium){
+        text-align: center
+    }
+    .container{
+
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows:auto auto;
+            grid-template-areas: "logo links1 links2"
+            "social  weblink copyright" ;
+            gap: 10px;
+            justify-items:start;
+        }
+
+
+
+      
+    }
+
+    &__logo{
+
+        @include breakpoint-up(large){
+            grid-area: logo;
+        }
+       
+    }
+
+    &__social{
+      
+        @include breakpoint-up(large){
+            grid-area: social;
+            a{
+               display: inline-block;   
+            }
+         
+        }
+        a:not(:last-child){
+            margin-right: 1rem;
+        }
+        @include breakpoint-down(medium){
+            margin: 10px;
+        }
+
+     
+    }
+    
+    &__links{
+
+        @include breakpoint-up(large){
+            a:not(:last-child){
+                margin-right: 5px;
+            }
+            &.cols1{
+                grid-area: links1;
+                display: inline;
+             }
+         
+             &.cols2{
+                grid-area: links2;
+                align-self: start;
+                justify-self: end;
+                display: inline;
+             }
+        }
+
+        @include breakpoint-down(medium){
+            a{
+                display: block;
+                line-height: 25px;
+            }
+            
+        }
+   
+    }
+
+
+    &__weblink{
+
+        @include breakpoint-up(large){
+            grid-area: weblink;
+            a{
+           color: black;
+            }
+        }
+     
+    }
+
+    &__copyright{
+
+        @include breakpoint-up(large){
+            grid-area: copyright;
+            align-self: end;
+            justify-self: end;
+        }
+
+        @include breakpoint-down(medium){
+            margin: 14px;
+    }
+       
+    }
+
+}
