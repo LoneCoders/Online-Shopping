@@ -9,6 +9,12 @@ html {
           box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+  left: 0;
+  right: 0;
+}
+
 .footer {
   background-color: cadetblue;
   padding: 30px;
@@ -115,5 +121,84 @@ html {
   .footer__copyright {
     margin: 14px;
   }
+}
+
+.navbar {
+  background-color: blueviolet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.navbar__logo img {
+  width: 65px;
+}
+
+.navbar__title {
+  font-size: 30px;
+  color: #ffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 135px;
+}
+
+.navbar__searchbarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 210px;
+  background-color: #ffff;
+  border-radius: 40px;
+}
+
+.navbar_search_bar {
+  line-height: 40px;
+  width: 163px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 3px;
+}
+
+.navbar_search_btn {
+  float: right;
+}
+
+.menus {
+  height: 25px;
+  background-color: #5adfc2;
+}
+
+.menus p {
+  text-align: center;
+  margin: 0px;
+}
+
+.content {
+  height: 100vh;
+  background-color: brown;
+}
+
+.content p {
+  margin: 0px;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=styles.css.map */

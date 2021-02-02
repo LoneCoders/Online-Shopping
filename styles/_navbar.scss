@@ -1,0 +1,41 @@
+.navbar{
+   background-color: blueviolet;
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;
+   padding: 10px;
+   &__logo{
+       img{
+        width: 65px;
+       } 
+   }
+
+    &__title{
+        font-size: 30px;
+        color: #ffff;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 135px;
+    }
+
+   &__searchbarContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 210px;
+    background-color:#ffff;
+    border-radius: 40px;
+    }
+   &_search_bar{
+    line-height: 40px; 
+    width: 163px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 3px;
+}
+   &_search_btn{
+     float: right;
+   }
+  
+}
