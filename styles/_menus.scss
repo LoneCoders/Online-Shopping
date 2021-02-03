@@ -1,8 +1,36 @@
 .menus{
-    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:8px;
     background-color:rgb(90, 223, 194);
-    p{
-        text-align: center;
-        margin: 0px;
+    .hamburger{
+          
+        >span{ 
+            display:block;
+            width: 24px;
+            height: 2px;
+            background-color: black;
+            transform-origin:1px 1px;
+            transition: all 200ms ease-in-out;
+        }
+        >span:not(:last-child){
+            margin-bottom: 6px;
+        }
+
+        &.open{
+            >span:first-child{
+                transform:rotate(45deg);
+            }
+            >span:nth-child(2){
+                opacity: 0;
+            }
+            >span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+
     }
+
+
 }

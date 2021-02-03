@@ -1,3 +1,5 @@
+@import "mixins";
+
 html{
     font-size: 100%;
     box-sizing: border-box;
@@ -10,4 +12,16 @@ body{
     margin: 0;
     left:0;
     right:0;
+}
+
+.hide-for-mobiles{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
 }
