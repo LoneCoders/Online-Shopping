@@ -32,5 +32,35 @@
 
     }
 
+    .dummy{
+        width: 40px;
+        height: 20px;
+    }
 
+ 
+     //menu links
+   &__links{
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:not(:last-child){
+       margin-right: 60px;
+    }
+   }
+
+  //menu icons
+   &__icons{
+
+    .fas{
+        display:inline-block;
+        height:20px;
+    }
+    .fas:not(:last-child){
+        margin-right: 5px;
+    }
+   
+   
+   }
+     
 }
