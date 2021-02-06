@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   
+    body{
+      background-color:violet;
+      font-family:serif;
+    }
+    .inner-box{
+      color:black;
+      display:table;
+      background-color:rgba(255, 255, 255, 0.979);
+      padding:55px 20px 20px 20px ;
+      
+      border-radius: 4px;
+      text-align: center;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top: 100px;
+      
+  }
+  
+  input{
+    border-radius:10px;
+    padding:7px;
+    border:none;
+    background-color:white;
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    
+    outline:none;
+    
+}
+input:focus{
+  border:2px solid black;
+}
+
+
+.inner-text{
+  padding-top:40px;
+  text-align:center;
+}
+
+.outer-box{
+  background-color:#dcdcdc;
+  width:450px;
+  height:600px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 10px;
+  
+}
+.Register{
+  padding-top:20px;
+}
+.close-bar{
+  color:rgba(247, 5, 5, 0.986);
+  position:relative;
+  bottom:150px;
+  left:230px;
+  background-color:rgba(255, 255, 255, 0.979);
+  border:none;
+  font-weight:bold;
+  outline:none;
+}
+
+.sign-up{
+  background-color: red;
+  border-radius: 10px;
+  outline:none;
+  border:none;
+  color:white;
+  width:200px;
+  height:35px;
+  font-weight: bold;
+}
+.close-bar:hover,.close-bar:focus{
+
+cursor:pointer;
+}
+     
+  </style>
+</head>
+<body>
+  
+  <div class="inner-box">
+   
+    <div class="outer-box">
+  
+  <form id="table">
+    
+    <div class="Register">
+    <h1>Register Here</h1>
+  </div>
+  <button class="close-bar">X</button>
+  <div class="inner-text">
+    <input type="text"  name="text" placeholder="Firstname" size="45"><br><br>
+    
+    <input type="text"  name="text" placeholder="Lastname" size="45"><br><br>
+
+    <input type="email"  name="" placeholder="email" size="45"></br></br>
+
+    <input type="password" name="" placeholder="Password" minlength="8" size="45"></br> </br>
+     
+    <input type="password" name="" placeholder="confirm password" minlength="8" size="45"></br></br>
+
+    <input type="tel"  name="" placeholder="Phone" size="45"></br></br>
+    
+    <input type="text"  name="" placeholder="Address" size="45"></br> </br>
+
+    <input type="text"  name="" placeholder="City" size="45"></br> </br>
+
+    <button class="sign-up">Sign-up</button>
+  </div> 
+  
+    
+    
+  
+  </form>
+</div>
+
+</div>
+<script>
+document.querySelector(".close-bar").addEventListener("click",function(){
+document.querySelector(".inner-box").style.display="none"
+
+
+
+});
+</script>
+
+</body>
+</html>
+
