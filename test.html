@@ -17,6 +17,26 @@
 
 <title>test footer</title>
 
+<!-- sidebar script-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+    $(document).ready(function () {
+          var bool=true;
+          $(".hamburger").click(function () {
+           if(bool){
+            $("body").css("overflow","hidden");
+            $(".sidebar_container").animate({right:'0px'},500);
+            bool=false;
+           }
+          else{
+            $(".sidebar_container").animate({right:'-370px'},500);
+            $("body").css("overflow","visible");
+            bool=true;
+           }
+          });
+        });
+    </script>
+     
 </head>
 <body>
     
@@ -68,7 +88,17 @@
             <a href="#">Furniture</a>
             <a href="#">Gadgets</a>
         </div>
-
+        <!-- menus for mobile view-->
+        <div class="sidebar_container" style="text-align: right;">
+            <div class="sidebar_container_menuContainer">
+                    <a href="#">Home</a><span></span>
+                    <a href="#">Dress</a><span></span>
+                    <a href="#">Electronics</a><span></span>
+                    <a href="#">Furniture</a><span></span>
+                    <a href="#">Gadgets</a>
+            </div>
+            
+        </div>
         <!--menu icons-->
         <div class="menus__icons">
             <i class="fas fa-shopping-cart"></i>
