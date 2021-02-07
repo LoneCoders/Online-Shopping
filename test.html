@@ -16,7 +16,6 @@
 <title>test project</title>
 
 <title>test footer</title>
-
 <!-- sidebar script-->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
     <script>
@@ -36,6 +35,7 @@
           });
         });
     </script>
+
      
 </head>
 <body>
@@ -106,6 +106,21 @@
         </div>
 
     </div>
+    <!-- image slideshow -->
+    <div class="slidecontainer">
+        <div class="myslide">
+            <img src="images/banner-01.jpg">
+        </div>
+        <div class="myslide">
+            <img src="images/banner-02.jpg">
+        </div>
+        <div class="dots">
+            
+        </div>
+        <a class="prev" style="left: 0;" onclick="plusSlide()">&#10094;</a>
+        <a class="next" style="right: 0;" onclick="minusSlide()">&#10095;</a>
+    </div>
+
     
     <!-- content section-->
     <div class="content">
@@ -147,6 +162,8 @@
     </div>
     </footer>
 
-    <script src="javaScript/hamburger.js"></script>
 </body>
+<script src="javascript/hamburger.js"></script>
+<script src="javascript/slideshow.js"></script>
+
 </html>

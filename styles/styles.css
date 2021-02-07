@@ -52,7 +52,8 @@ body {
         grid-template-columns: auto auto auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: "logo links1 links2" "social  weblink copyright";
+        grid-template-areas: "logo links1 links2"
+ "social  weblink copyright";
     gap: 10px;
     justify-items: start;
   }
@@ -318,6 +319,37 @@ body {
   height: 1px;
 }
 
+
+.slidecontainer{
+  position: relative;
+  background-color: brown;
+  max-height: 30%;
+}
+
+.myslide{
+  display: none;
+}
+.myslide img{
+  width: 100%;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  top:50%;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev:hover,.next:hover{
+  background-color: #34495E;
+}
 .content {
   height: 100vh;
   background-color: brown;
