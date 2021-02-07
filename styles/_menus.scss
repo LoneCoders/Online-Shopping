@@ -73,6 +73,9 @@
     width: 370px;
     height:100vh;
     display: inline-block;
+    @include breakpoint-up(large){
+        display: none;
+    }
   //  visibility: hidden;
     &_menuContainer{
         display: flex;
@@ -80,13 +83,31 @@
         justify-content: center;
         align-items: center;
         
+        ul{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width:370px;
+        }
+        li{
+            list-style-type: none;
+            text-align: center;
+            border-top: 0.015px solid #85929E;   
+        }
+        li:not(:last-child){
+            border-bottom: 0.2px solid black;
+        }
+        li:hover{
+            background-color:#5D6D7E ;
+        }
+
         a{
             text-decoration: none;
             color:#fff;
             line-height:65px;
         }
-        a:hover{
-           color: #CACFD2 ;
+        a:hover,a:active{
+            color: black;
         }
 
         span{
