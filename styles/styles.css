@@ -57,6 +57,16 @@ body {
     gap: 10px;
     justify-items: start;
   }
+
+  
+}
+
+@media (min-width: 64em){
+  .dots{
+    top:80%;
+    position: absolute;
+    left: 48%;
+  }
 }
 
 @media (min-width: 64em) {
@@ -378,6 +388,23 @@ body {
 .prev:hover,.next:hover{
   background-color: #34495E;
 }
+.dots{
+  position: absolute;
+  top: 70%;
+  left:48%;
+
+}
+.dotb{
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0;
+  margin: 0px 1px;
+  border-radius: 9999px;
+}
+
 .content {
   height: 100vh;
   background-color: brown;
