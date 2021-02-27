@@ -375,7 +375,6 @@ body {
   cursor: pointer;
   position: absolute;
   width: auto;
-  top:50%;
   padding: 16px;
   margin-top: -50px;
   color: white;
@@ -384,6 +383,16 @@ body {
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+}
+@media (max-width:63.9375em){
+  .next,.prev{
+    top:66%;
+  }
+}
+@media (min-width:64em){
+  .next,.prev{
+    top:58%;
+  }
 }
 .prev:hover,.next:hover{
   background-color: #34495E;
