@@ -6,7 +6,7 @@ function reset(){
     clearTimeout(timer);
     timer = setInterval(()=>{
         showSlide(++showIndex);
-    },2000);
+    },20000000);
 }
 
 function plusSlide(){

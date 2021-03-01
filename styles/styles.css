@@ -13,6 +13,7 @@ body {
   margin: 0;
   left: 0;
   right: 0;
+  background-color: brown;
 }
 
 @media (max-width: 63.9375em) {
@@ -63,7 +64,6 @@ body {
 
 @media (min-width: 64em){
   .dots{
-    top:80%;
     position: absolute;
     left: 48%;
   }
@@ -360,8 +360,8 @@ body {
 
 .slidecontainer{
   position: relative;
-  background-color: brown;
-  max-height: 30%;
+
+  /* max-height: 30%; */
 }
 
 .myslide{
@@ -373,10 +373,10 @@ body {
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
+ /* position: absolute;*/
   width: auto;
   padding: 16px;
-  margin-top: -50px;
+  /*margin-top: -50px;*/
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -386,32 +386,46 @@ body {
 }
 @media (max-width:63.9375em){
   .next,.prev{
-    top:66%;
+    top:100%;
+    padding:6px;
   }
 }
 @media (min-width:64em){
   .next,.prev{
     top:58%;
+    
   }
 }
 .prev:hover,.next:hover{
   background-color: #34495E;
 }
 .dots{
+  display: flex;
+  justify-content: center;
   position: absolute;
-  top: 70%;
-  left:48%;
-
+  left: 50%; 
+  bottom: 10%;
+}
+@media (min-width:40em){
+  .dotb{
+    width: 10px;
+    height: 10px;
+  }
+}
+  
+@media (max-width:39.9375em){
+  .dotb{
+    width: 5px;
+    height: 5px;
+  }
 }
 .dotb{
-  width: 10px;
-  height: 10px;
   cursor: pointer;
   border: 0;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 0;
-  margin: 0px 1px;
-  border-radius: 9999px;
+  margin: 0px 2px;
+  border-radius: 6px;
 }
 
 .content {
@@ -427,5 +441,14 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.arrow{
+  display: flex;
+  width: 100%;
+  position: absolute;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
 }
 /*# sourceMappingURL=styles.css.map */
