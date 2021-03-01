@@ -28,8 +28,8 @@ con.connect((err)=>{
 	//for first run
 	/* 
 	con.query("CREATE DATABASE onlineshop;",concallback);
-	 con.query("USE onlineshop",concallback);
-	 con.query("CREATE TABLE USERLIST(ID INT NOT NULL AUTO_INCREMENT,NAME VARCHAR(30),PASSWORD VARCHAR(13),PRIMARY KEY(ID));",concallback);
+	con.query("USE onlineshop",concallback);
+	con.query("CREATE TABLE USERLIST(ID INT NOT NULL AUTO_INCREMENT,NAME VARCHAR(30),PASSWORD VARCHAR(13),PRIMARY KEY(ID));",concallback);
 	*/
 	con.query("SELECT * FROM USERLIST;",concallback);
 });
