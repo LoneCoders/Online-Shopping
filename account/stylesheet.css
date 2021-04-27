@@ -104,7 +104,7 @@ input[type=text]{
   
   a{
     text-decoration: none;
-    color:#173f5f;
+    color:inherit;
   
   }
   ul{
@@ -112,6 +112,7 @@ input[type=text]{
   }
  .list{
   display: flex;
+  color : #173f5f;
   justify-content: space-between;
   align-items: center;
  }
