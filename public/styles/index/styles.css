@@ -13,7 +13,6 @@ body {
   margin: 0;
   left: 0;
   right: 0;
-  background-color: brown;
 }
 
 @media (max-width: 63.9375em) {
@@ -31,6 +30,9 @@ body {
 .footer {
   background-color: cadetblue;
   padding: 30px;
+  position: relative;
+  margin-top : 15px;
+  bottom : 0;
   font-family: 'Lato', sans-serif;
 }
 
@@ -428,10 +430,7 @@ body {
   border-radius: 6px;
 }
 
-.content {
-  height: 100vh;
-  background-color: brown;
-}
+
 
 .content p {
   margin: 0px;

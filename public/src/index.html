@@ -4,7 +4,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link rel="stylesheet" href="styles/styles.css" type="text/css">
+<link rel="stylesheet" href="/styles/index/styles.css" type="text/css">
 
 <!-- google font api -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,6 +33,7 @@
             bool=true;
            }
           });
+          $(".content").load("/src/index_body.html");
         });
     </script>
 
@@ -46,7 +47,7 @@
     
             <!-- logo-->
             <a href="#" class="navbar__logo">
-                <img src="images/cart.png" alt="online_shop_logo">
+                <img src="/images/index/cart.png" alt="online_shop_logo">
             </a>
     
             <!-- title-->
@@ -112,10 +113,10 @@
     <!-- image slideshow -->
     <div class="slidecontainer">
         <div class="myslide">
-            <img src="images/banner-01.jpg">
+            <img src="/images/index/banner-01.jpg">
         </div>
         <div class="myslide">
-            <img src="images/banner-02.jpg">
+            <img src="/images/index/banner-02.jpg">
         </div>
         <div class="arrow">
             <a class="prev" style="left: 0;" onclick="plusSlide()">&#10094;</a>
@@ -139,14 +140,14 @@
     <footer class="footer">
     <div class="container">
            <a href="#" class="footer__logo">
-               <img src="images/cart.png" alt="footerLogo">
+               <img src="/images/index/cart.png" alt="footerLogo">
            </a>
            <div class="footer__social">
-               <a href="#"> <img src="images/icon-facebook.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-instagram.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-pinterest.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-twitter.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-youtube.svg" alt=""></a>
+               <a href="#"> <img src="/images/index/icon-facebook.svg" alt=""></a>
+               <a href="#"> <img src="/images/index/icon-instagram.svg" alt=""></a>
+               <a href="#"> <img src="/images/index/icon-pinterest.svg" alt=""></a>
+               <a href="#"> <img src="/images/index/icon-twitter.svg" alt=""></a>
+               <a href="#"> <img src="/images/index/icon-youtube.svg" alt=""></a>
            </div>
 
            <div class="footer__links cols1">
@@ -171,7 +172,7 @@
     </footer>
 
 </body>
-<script src="javascript/hamburger.js"></script>
-<script src="javascript/slideshow.js"></script>
+<script src="/javascript/hamburger.js"></script>
+<script src="/javascript/slideshow.js"></script>
 
 </html>
