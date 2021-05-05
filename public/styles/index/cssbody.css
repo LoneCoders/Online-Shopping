@@ -82,13 +82,23 @@ body {
     object-fit: contain;
   }
   
-  .hero-content {
+ /* .hero-content {
     position: absolute;
     top: 10%;
     left: 55%;
     transform: translate(25%, -50%);
+  }*/
+  .hero-content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10px;
   }
-  
+  .banner_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .hero-content h2 {
     color: #b888ff;
     font-size: 3rem;
@@ -124,9 +134,9 @@ body {
       right: -20%;
     }
   
-    .hero-content {
+  /*  .hero-content {
       transform: translate(20%, -50%);
-    }
+    }*/
   
     .hero-content h2 {
       font-size: 2rem;
@@ -158,10 +168,10 @@ body {
       bottom: -15%;
     }
   
-    .hero-content {
+   /* .hero-content {
       top: 40%;
       transform: translate(15%, -50%);
-    }
+    }*/
   
     .header .hero-img {
       right: 0%;
@@ -185,7 +195,7 @@ body {
 
 /* Adverts */
 .section {
-  padding: 10rem 0 5rem 0;
+  margin: 3.125rem 0px;
 }
 
 .advert-center {
@@ -255,15 +265,16 @@ body {
   font-size: 1.5rem;
   text-transform: capitalize;
 }
-
+.title{
+  text-align: center;
+  margin: 3.125rem 0px;
+}
 .title h1{
   color: blue;
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 5rem;
-  margin-left: 50rem;
   text-shadow: 5px 6px 0px rgba(37, 59, 112, 0.1);
-
+  
 }
 
 /* Product */
@@ -378,7 +389,6 @@ body {
 .product-banner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 50rem;
   background-color: #243a6f;
 }
 

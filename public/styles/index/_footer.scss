@@ -11,7 +11,7 @@
     @include breakpoint-down(medium){
         text-align: center
     }
-    .container{
+    &__container{
 
         @include breakpoint-up(large){
             display: grid;
