@@ -68,10 +68,10 @@
    .sidebar_container{
     
     position: fixed;
-    right: -370px;
+    right: -320px;
     top:0px;
     background-color: #34495E;
-    width: 370px;
+    width: 320px;
     height:100vh;
     display: inline-block;
     @include breakpoint-up(large){
@@ -88,7 +88,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            width:370px;
+            width:320px;
         }
         li{
             list-style-type: none;
@@ -113,7 +113,7 @@
 
         span{
             display: block;
-            width: 370px;
+            width: 320px;
             background:#ffff;
             opacity:0.4;    
             height:1px;
