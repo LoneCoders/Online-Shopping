@@ -30,13 +30,9 @@ padding: 0;
 .wrap{
   margin:20px; 
   display:flex;
+  justify-content:space-evenly;
   background-color: #ebecf0;
  
-}
-.box{
-  position: relative;
-  left: 50px;
-  top: 20px;
 }
 
 input[type=text]{
@@ -87,12 +83,7 @@ input[type=text]{
       height: 28px;
     }  
   
-    .second{
-      display:inline-block;
-      position: relative;
-      left:290px;
-      top:10px;
-    }
+  
    
    
   
@@ -204,3 +195,62 @@ span{
   color:#f1c27d;
   
 }*/
+ .hamburger{
+  position: relative;
+  float: right;
+ }
+.hamburger > span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  -webkit-transform-origin: 1px 1px;
+          transform-origin: 1px 1px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.hamburger > span:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.hamburger.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+ .hamburger.open > span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+
+@media(min-width:64em){
+  .hamburger{
+  display: none;  
+  }
+}
+@media(max-width:63.9375em){
+  .menu-bar{
+    display:none;
+  }
+  .wrap{
+    display: block;
+  }
+  .name,.details{
+    display:flex;
+    flex-direction: column;
+  }
+  .second{
+    display: flex;
+    justify-content: center;
+  }
+  .native{
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 30px;
+  }
+}
