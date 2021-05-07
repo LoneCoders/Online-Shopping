@@ -104,9 +104,23 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    animation-name: text;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
   }
+  @keyframes text{
+    from{
+      color: #b888ff;
+    }
+    to{
+      color: #1fc435;
+    }
+  }
+
   
   .hero-content .discount {
+    
     color: #fbb419;
   }
   
@@ -117,6 +131,17 @@ body {
     display: block;
     line-height: 1;
     text-shadow: 3px 3px 0 #f1f1f1, 4px 4px 0 #f1f1f1;
+    animation-name: text1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes text1{
+    from{
+      color: #253b70;
+    }
+    to{
+      color: #e00b5d;
+    }
   }
   
   .btn {
