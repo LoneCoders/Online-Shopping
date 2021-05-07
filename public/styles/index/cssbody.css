@@ -236,7 +236,6 @@ body {
   border-radius: 1rem;
   padding: 1.6rem;
   overflow: hidden;
-  z-index: 1;
 }
 
 .advert-box img {
@@ -245,7 +244,6 @@ body {
   left: -20%;
   height: 100%;
   width: 35rem;
-  z-index: -1;
 }
 
 .advert-box:nth-child(1) {
