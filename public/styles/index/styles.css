@@ -155,11 +155,11 @@ body {
 }
 
 .navbar__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 30px;
   color: #ffff;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 132px;
 }
 
 /*.navbar__searchbarContainer {
@@ -451,7 +451,7 @@ body {
 }
 /*# sourceMappingURL=styles.css.map */
 .searchbox{
-	margin: 20px auto;
+  /*	margin: 20px auto;*/
   margin-right: 0%;
 	background: #ffffff;
 	height: 30px;
@@ -464,7 +464,7 @@ body {
 }
 
 .searchbox:hover input{
-	width: 300px;
+	width: 250px;
 	cursor:pointer;
 }
 
