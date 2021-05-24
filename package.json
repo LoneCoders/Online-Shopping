@@ -1,0 +1,27 @@
+{
+  "name": "Online-Shopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoneCoders/Online-Shopping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoneCoders/Online-Shopping/issues"
+  },
+  "homepage": "https://github.com/LoneCoders/Online-Shopping#readme"
+}

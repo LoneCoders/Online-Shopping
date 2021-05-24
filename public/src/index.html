@@ -1,115 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link rel="stylesheet" href="/styles/index/styles.css" type="text/css">
-
-<!-- google font api -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-
-
-<!-- fontawesome api -->
-<script src="https://kit.fontawesome.com/4ce11a0f80.js" crossorigin="anonymous"></script>
-<title>test project</title>
-
-<title>test footer</title>
-<!-- sidebar script-->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-    <script>
-    $(document).ready(function () {
-          var bool=true;
-          $(".hamburger").click(function () {
-           if(bool){
-            $("body").css("overflow","hidden");
-            $(".sidebar_container").animate({right:'0px'},500);
-            bool=false;
-           }
-          else{
-            $(".sidebar_container").animate({right:'-370px'},500);
-            $("body").css("overflow","visible");
-            bool=true;
-           }
-          });
-          $(".content").load("/src/index_body.html");
-        });
-    </script>
-
-     
-</head>
+{%HEAD%}
 <body>
     
-    <header>
-        <!-- nav bar -->
-        <nav class="navbar">
-    
-            <!-- logo-->
-            <a href="#" class="navbar__logo">
-                <img src="/images/index/cart.png" alt="online_shop_logo">
-            </a>
-    
-            <!-- title-->
-            <p class="navbar__title hide-for-mobiles">
-                Online Shopping
-            </p>
-    
-            <!--search bar-->
-            <div class="searchbox">
-                <input type="text"  placeholder="Type to search...">
-                <a href="#">
-                    <li class="fas fa-search"></li>
-                </a>
-            </div>
-    
-    
-        </nav>
-    </header>
-
-    <!--Menus Section-->
-    <div class="menus">
-         <!--Hamburger menu-->
-        <div class="hamburger hide-for-desktop">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        <!--menu dummybox-->
-        <div class='dummy hide-for-mobiles'>
-
-        </div>
-
-        <!--menu links-->
-        <div class="menus__links hide-for-mobiles">
-            <a href="#">Home</a>
-            <a href="#">Dress</a>
-            <a href="#">Electronics</a>
-            <a href="#">Furniture</a>
-            <a href="#">Gadgets</a>
-        </div>
-        <!-- menus for mobile view-->
-        <div class="sidebar_container " style="text-align: right; z-index: 1;">
-            <div class="sidebar_container_menuContainer ">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Dress</a></li>
-                    <li><a href="#">Electronics</a></li>
-                    <li><a href="#">Furniture</a></li>
-                    <li><a href="#">Gadgets</a></li>
-                </ul>
-                    
-            </div>
-            
-        </div>
-        <!--menu icons-->
-        <div class="menus__icons">
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-user-circle"></i>
-        </div>
-
-    </div>
+  {%HEADER%}
     <!-- image slideshow -->
     <div class="slidecontainer">
         <div class="myslide">
@@ -139,39 +33,7 @@
     </div>
 
     <!-- footer -->
-    <footer class="footer">
-    <div class="footer__container">
-           <a href="#" class="footer__logo">
-               <img src="/images/index/cart.png" alt="footerLogo">
-           </a>
-           <div class="footer__social">
-               <a href="#"> <img src="/images/index/icon-facebook.svg" alt=""></a>
-               <a href="#"> <img src="/images/index/icon-instagram.svg" alt=""></a>
-               <a href="#"> <img src="/images/index/icon-pinterest.svg" alt=""></a>
-               <a href="#"> <img src="/images/index/icon-twitter.svg" alt=""></a>
-               <a href="#"> <img src="/images/index/icon-youtube.svg" alt=""></a>
-           </div>
-
-           <div class="footer__links cols1">
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-           </div>
-
-           <div class="footer__links cols2">
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms and Conditions</a>
-            <a href="#">Disclaimer</a>
-           </div>
-
-           <div class="footer__weblink">
-               <a href="#">online shopping</a>
-           </div>
-
-           <div class="footer__copyright" Style="color:black">
-            © Online Shopping. All Rights Reserved.
-           </div>
-    </div>
-    </footer>
+   {%FOOTER%}
 
 </body>
 <script src="/javascript/hamburger.js"></script>
