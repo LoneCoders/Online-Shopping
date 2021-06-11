@@ -1,6 +1,8 @@
 const express = require('express');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
+const globalErrorHandler = require('./controller/errorController');
+const AppError = require('./utils/appError');
 const app = express();
 
 // GLOBAL MIDDELWARES
@@ -12,8 +14,10 @@ app.use(express.json());
 // root of product route
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
-app.use((req, res) => {
-  res.end('<h1>Page note found</h1>');
-});
 
+// global  error handler
+app.use('*', (req, res, next) => {
+  next(new AppError(`can't find ${req.originalUrl} in this server`, 404));
+});
+app.use(globalErrorHandler);
 module.exports = app;
