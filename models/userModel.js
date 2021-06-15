@@ -40,12 +40,21 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// to encrypt the password
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   this.password = await bcrypt.hash(this.password, 12);
   this.confirmPassword = undefined;
   next();
 });
+
+//instance method
+userSchema.methods.correctPassword = async function (
+  candidatePassword,
+  userPassword
+) {
+  return await bcrypt.compare(candidatePassword, userPassword);
+};
 
 // CREATE  MODEL FROM SCHEMA
 const User = mongoose.model('User', userSchema);

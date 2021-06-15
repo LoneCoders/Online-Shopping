@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
 const globalErrorHandler = require('./controller/errorController');
@@ -6,6 +7,11 @@ const AppError = require('./utils/appError');
 const app = express();
 
 // GLOBAL MIDDELWARES
+
+// morgan(third party) to log the url and response status
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
 // SERVE STATIC FILES
 app.use(express.static(__dirname + '/public'));
