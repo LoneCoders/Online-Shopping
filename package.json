@@ -12,6 +12,7 @@
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "ndb": "^1.1.5",
+    "slugify": "^1.5.3",
     "validator": "^13.6.0"
   },
   "devDependencies": {
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development nodemon server.js",
-    "prod": "NODE_ENV=production nodemon server.js",
+    "pro": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js"
   },
   "repository": {

@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
+const actualRouter = require('./routes/actualRoutes');
 const globalErrorHandler = require('./controller/errorController');
 const AppError = require('./utils/appError');
 const app = express();
@@ -18,6 +19,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 
 // root of product route
+app.use('/', actualRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 
