@@ -1,0 +1,48 @@
+header
+  // nav bar
+  nav.navbar
+    // logo
+    a.navbar__logo(href='/')
+      img(src='/images/index/cart.png' alt='online_shop_logo')
+    // title
+    p.navbar__title.hide-for-mobiles
+      | Online Shopping
+    // search bar
+    .searchbox
+      input(type='text' placeholder='Type to search...')
+      a(href='#')
+        li.fas.fa-search
+// Menus Section
+.menus
+  // Hamburger menu
+  .hamburger.hide-for-desktop
+    span
+    span
+    span
+  // menu dummybox
+  .dummy.hide-for-mobiles
+  // menu links
+  .menus__links.hide-for-mobiles
+    a(href='/grocery') Grocery
+    a(href='/dress') Dress
+    a(href='/electronics') Electronics
+    a(href='/furniture') Furniture
+    a(href='/gadgets') Gadgets
+  // menus for mobile view
+  .sidebar_container(style='text-align: right; z-index: 1;')
+    .sidebar_container_menuContainer
+      ul
+        li
+          a(href='/grocery') Grocery
+        li
+          a(href='/dress') Dress
+        li
+          a(href='/electronics') Electronics
+        li
+          a(href='/furniture') Furniture
+        li
+          a(href='/gadgets') Gadgets
+  // menu icons
+  .menus__icons
+    i.fas.fa-shopping-cart
+    i.fas.fa-user-circle

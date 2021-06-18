@@ -1,0 +1,17 @@
+section.section.featured 
+ .title 
+   h1 Upcoming Products
+ .product-center.container
+  each product in products
+   .product
+     .product-header
+       img(src=`images/products/${product.imageCover}` alt=`${product.name}`)
+       ul.icons
+        span: i.bx.bx-heart
+        span: i.bx.bx-shopping-bag
+        span: i.bx.bx-search
+     .product-footer
+        a(href='#')
+         h3= product.name.toUpperCase()
+        h4.price= `$${product.price}`
+

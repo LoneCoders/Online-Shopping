@@ -7,16 +7,23 @@ const productSchema = new mongoose.Schema({
     unique: true,
     trim: true,
   },
-  tag: {
+  tagName: {
     type: String,
-    default: 'home',
+    required: [true, 'A product must have a tagName'],
     enum: {
-      values: ['home', 'dress', 'electronics', 'furniture', 'gadgets'],
+      values: ['dress', 'electronics', 'furniture', 'gadgets'],
       message: '{VALUE} is not supported',
     },
     select: false,
   },
-  slug: String,
+  home: {
+    type: Boolean,
+    default: false,
+  },
+  slug: {
+    type: String,
+    lowercase: true,
+  },
   ratingsAverage: {
     type: Number,
     default: 4.5,

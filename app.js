@@ -1,11 +1,18 @@
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
-const actualRouter = require('./routes/actualRoutes');
+const viewRouter = require('./routes/viewRoutes');
 const globalErrorHandler = require('./controller/errorController');
 const AppError = require('./utils/appError');
 const app = express();
+
+// set view engine
+app.set('view engine', 'pug');
+
+// define path for views
+app.set('views', path.join(__dirname, 'views'));
 
 // GLOBAL MIDDELWARES
 
@@ -15,11 +22,13 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // SERVE STATIC FILES
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// parse json
 app.use(express.json());
 
 // root of product route
-app.use('/', actualRouter);
+app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 

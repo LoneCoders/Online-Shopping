@@ -1,0 +1,46 @@
+extends base
+
+block content
+    // image slideshow
+    .slidecontainer
+        .myslide
+            img(src='/images/index/banner-01.jpg')
+        .myslide
+            img(src='/images/index/banner-02.jpg')
+        .arrow
+            a.prev(style='left: 0;' onclick='plusSlide()') ❮
+            a.next(style='right: 0;' onclick='minusSlide()') ❯
+        .dots
+            button.dotb(onclick='showSlide(1)')
+            button.dotb(onclick='showSlide(2)')
+    // content section
+    //- banner section
+    .banner_container
+        .banner
+            img.hero-img(src='/images/index/banner.png' alt='')
+        .hero-content
+            h2.text
+                span.discount 70% 
+                |  SALE OFF
+            h1
+                span Summer Vibes
+            h1
+                span mode on
+            a.btn(href='#') shop now
+    // product content  
+    main
+      include _content
+      // advertisement 
+      section.section(style='margin-bottom: 0px;')
+        .product-banner
+          .left
+            img(src='/images/index/test.jpg' alt='')
+          .right
+            .content
+                h2
+                  span.discount 70% 
+                  |  SALE OFF
+                h1
+                  span Collect Your
+                  span Kids Collection
+                a.btn(href='#') shop now
