@@ -38,6 +38,10 @@ const userSchema = new mongoose.Schema({
       message: 'passwords are not same',
     },
   },
+  passwordChangedAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 // to encrypt the password
@@ -48,12 +52,24 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-//instance method
+//instance methods
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
+};
+
+userSchema.methods.changedPasswordAfter = function (JWTtimeStamp) {
+  if (this.passwordChangedAt) {
+    const changedTimeStamp = parseInt(
+      this.passwordChangedAt.getTime() / 1000,
+      10
+    );
+    // console.log(changedTimeStamp, JWTtimeStamp);
+    return JWTtimeStamp < changedTimeStamp;
+  }
+  return false;
 };
 
 // CREATE  MODEL FROM SCHEMA

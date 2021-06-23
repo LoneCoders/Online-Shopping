@@ -15,6 +15,10 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // GLOBAL MIDDELWARES
+app.use((req, res, next) => {
+  // console.log(req.headers);
+  next();
+});
 
 // morgan(third party) to log the url and response status
 if (process.env.NODE_ENV === 'development') {

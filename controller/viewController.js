@@ -3,12 +3,7 @@ const Product = require('./../models/productModel');
 
 const getData = (tag = '', file, bool = false) => {
   // define filter
-  const filter =
-    tag === ''
-      ? {
-          $or: [{ tagName: tag }, { home: bool }],
-        }
-      : { tagName: tag };
+  const filter = tag === '' ? { home: bool } : { tagName: tag };
 
   return catchAsync(async (req, res, next) => {
     const products = await Product.find(filter);
