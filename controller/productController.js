@@ -24,3 +24,12 @@ exports.createProduct = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+// delete product middleware to delete product documents
+exports.deleteProduct = catchAsync(async (req, res, next) => {
+  await Product.findByIdAndDelete(req.params.id);
+  res.status(204).json({
+    status: 'success',
+    msg: 'product deleted successfully!',
+  });
+});

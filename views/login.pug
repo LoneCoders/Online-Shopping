@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/styles/registration/register.css' type='text/css')
+  title #{title}
+body
+ .inner-box
+  .outer-box
+    form#table.loginform
+      .Register
+        h1 Login
+      .inner-text
+        input#email(type='email' name='' placeholder='email' size='45')
+        br
+        br
+        input#password(type='password' name='' placeholder='Password' minlength='8' size='45')
+        br
+        br
+        button.sign-up Login
+        p Don't have an account? 
+         a(href="/signUp") create account here
+ //-script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js")
+ script(src="/javascript/bundle.js")

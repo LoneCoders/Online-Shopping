@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/styles/registration/register.css' type='text/css')
+  title #{title}
+body
+ .inner-box
+  .outer-box
+    form#table.signUpForm
+      .Register
+        h1 Register Here
+      .inner-text
+        input#fname(type='text' name='text' placeholder='Firstname' size='45')
+        br
+        br
+        input#lname(type='text' name='text' placeholder='Lastname' size='45')
+        br
+        br
+        input#email(type='email' name='' placeholder='email' size='45')
+        br
+        br
+        input#password(type='password' name='' placeholder='Password' minlength='8' size='45')
+        br
+        br
+        input#confirmPassword(type='password' name='' placeholder='confirm password' minlength='8' size='45')
+        br
+        br
+        button.sign-up Sign-up
+        p Already have an account? 
+         a(href="/login") login here
+ script(src="/javascript/bundle.js")

@@ -24,3 +24,15 @@ exports.getElectronics = getData('electronics', 'Electronics');
 exports.getFurniture = getData('furniture', 'Furniture');
 
 exports.getGadgets = getData('gadgets', 'Gadgets');
+
+exports.getSignUp = catchAsync(async (req, res, next) => {
+  res.status(200).render('signUp', {
+    title: 'signUp',
+  });
+});
+
+exports.getLogin = catchAsync(async (req, res, next) => {
+  res.status(200).render('login', {
+    title: 'login',
+  });
+});

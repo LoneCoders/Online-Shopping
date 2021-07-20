@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const cookieParser = require('cookie-Parser');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRoutes');
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // parse json
 app.use(express.json());
+app.use(cookieParser());
 
 // root of product route
 app.use('/', viewRouter);
