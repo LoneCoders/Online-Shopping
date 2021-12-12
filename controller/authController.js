@@ -4,7 +4,7 @@ const { promisify } = require('util');
 const { findOne } = require('./../models/userModel');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
-const AppError = require('./../utils/AppError');
+const AppError = require('./../utils/appError');
 const sendEmail = require('../utils/email');
 
 const createSendToken = (user, statusCode, res) => {
